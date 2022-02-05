@@ -31,5 +31,18 @@
 */
 
 function insertionSort(arr) {
-  //TODO
+  for (let i = 1; i < arr.length; i++) {
+    // Save the current target so this space is available to use shifting
+    let numToInsert = arr[i];
+    let leftIndex = i;
+    while (leftIndex && numToInsert < arr[leftIndex - 1]) {
+      // Shift to the right because it's greater than the item. We are going to insert
+      arr[leftIndex] = arr[leftIndex - 1];
+      leftIndex -= 1;
+    }
+    arr[leftIndex] = numToInsert;
+  }
+  return arr;
 }
+
+console.log(insertionSort([6, 5, 3, 1, 8, 7, 2, 4]));
