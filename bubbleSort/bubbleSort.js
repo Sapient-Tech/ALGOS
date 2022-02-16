@@ -13,7 +13,7 @@
 */
 const nums1 = [5, 3, 4, 2, 1];
 const nums2 = [9, 2, 5, 6, 4, 3, 7, 10, 1, 8];
-const nums3 = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
+const nums3 = [10, 9, 8, 7, 6, 5, 5, 3, 2, 1];
 
 function bubbleSort(nums) {
   var check = true
@@ -33,3 +33,4 @@ function bubbleSort(nums) {
   }
   return nums
 }
+console.log(bubbleSort(nums3))
