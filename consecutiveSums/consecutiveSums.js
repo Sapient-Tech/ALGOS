@@ -21,5 +21,21 @@
 // if no matches, return empty array
 
 function findConsecutiveSums(arr, k) {
-  //TODO
+  var result = [];
+  for (let j = 0; j < arr.length; j++) {
+      for (let i = j; i < arr.length; i++) {
+    var sum = 0;
+    var subRes = [];
+    if (sum < k) {
+      sum += arr[i];
+      subRes.push(arr[i]);
+    } else if (sum === k) {
+      result.push([...subRes]);
+    } else if(sum > k){
+      sum = 0;
+      subRes = [];
+    }
+  }
+  }
+  return result;
 }
