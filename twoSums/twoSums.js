@@ -29,21 +29,24 @@
 
 function twoSums(arr, target) {
   for (let i = 0; i < arr.length; i++) {
-    var sum = arr[i]
-    console.log(sum)
+    var sum = arr[i];
+    var output = [];
+    console.log(sum);
     for (let j = 0; j < arr.length; j++) {
       if (j === i) {
-        j += 1
-        console.log("J pass to " + j)
+        j += 1;
+        console.log("J pass to " + j);
       }
-      sum += arr[j]
-      console.log(sum)
-      if (sum === target){
-          return [i, j]
-        } else {
-          sum -= arr[j]
-          console.log(sum)
-        }
+      sum += arr[j];
+      console.log(sum);
+      if (sum === target) {
+        output.push(i);
+        output.push(j);
+      } else {
+        sum -= arr[j];
+        console.log(sum);
+      }
     }
+    return output;
   }
 }
