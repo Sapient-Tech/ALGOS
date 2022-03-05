@@ -28,5 +28,22 @@
 // output: [0,1]
 
 function twoSums(arr, target) {
-    //TODO
+  for (let i = 0; i < arr.length; i++) {
+    var sum = arr[i]
+    console.log(sum)
+    for (let j = 0; j < arr.length; j++) {
+      if (j === i) {
+        j += 1
+        console.log("J pass to " + j)
+      }
+      sum += arr[j]
+      console.log(sum)
+      if (sum === target){
+          return [i, j]
+        } else {
+          sum -= arr[j]
+          console.log(sum)
+        }
+    }
   }
+}
